@@ -1,0 +1,14 @@
+{
+  "name": "Ubuntu Desktop Codespace",
+  "forwardPorts": [3000, 3001],
+  "portsAttributes": {
+    "3000": {
+      "label": "Ubuntu desktop (HTTP)",
+      "onAutoForward": "notify"
+    },
+    "3001": {
+      "label": "Ubuntu desktop (HTTPS)",
+      "onAutoForward": "notify"
+    }
+  }
+}

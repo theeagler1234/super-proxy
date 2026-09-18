@@ -1,0 +1,16 @@
+services:
+  ubuntu-desktop:
+    image: lscr.io/linuxserver/webtop:ubuntu-xfce
+    container_name: ubuntu-desktop
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: Etc/UTC
+      CUSTOM_USER: ubuntu
+      PASSWORD: change-this-password
+      TITLE: Ubuntu Codespace Desktop
+    network_mode: host
+    volumes:
+      - ./ubuntu-desktop-config:/config
+    shm_size: "1gb"
+    restart: unless-stopped
